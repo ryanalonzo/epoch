@@ -1,0 +1,31 @@
+{
+    "name": "ralonzo/epoch",
+    "description": "An E-commerce website for people who love watches",
+    "type": "Project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ryanalonzo",
+            "email": "r_alonzo@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Epoch\\": "app/"
+        },
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "repositories": [
+        {
+            "url": "https://github.com/ryanalonzo/vivid.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^3.3",
+        "vlucas/phpdotenv": "^2.4",
+        "ralonzo/vivid": "dev-master"
+    }
+}
