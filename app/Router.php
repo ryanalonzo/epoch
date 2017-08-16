@@ -20,6 +20,17 @@ class Router
         ];
     }
 
+    public function post($request, $controller)
+    {
+        list($controller, $method) = explode('::', $controller);
+
+        $controller = "\Epoch\Controllers\\$controller";
+
+        $controller = new $controller($_POST);
+
+        return $controller->$method();
+    }
+
     public function getRoutes()
     {
         return $this->routes;

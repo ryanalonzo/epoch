@@ -7,7 +7,6 @@
 <body>
     <h1>Home</h1>
 
-    <a href="customers">Customers</a>
     <a href="login">Login</a>
     <a href="signup">Sign up</a>
 </body>
