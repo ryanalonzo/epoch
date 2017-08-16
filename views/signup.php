@@ -31,7 +31,8 @@
                 <td><input type="text" name="password" placeholder="Password"></td>
             </tr>
             <tr>
-                <td><textarea name="address" placeholder="Address"></textarea>
+                <td>
+                    <textarea name="address" placeholder="Address"></textarea>
                 </td>
             </tr>
             <tr>

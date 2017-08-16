@@ -6,7 +6,9 @@
 </head>
 <body>
     <h1>Home</h1>
-
+    <?php
+        echo $users;
+    ?>
     <a href="login">Login</a>
     <a href="signup">Sign up</a>
 </body>

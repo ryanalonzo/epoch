@@ -15,6 +15,8 @@ class LoginController
 
     function login()
     {
+        $user = new User;
+
 
     }
 }

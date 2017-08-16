@@ -1,6 +1,8 @@
 <?php
 require_once('../vendor/autoload.php');
 
+use Epoch\Models\User;
+
 $dotenv = new \Dotenv\Dotenv(__DIR__ . '/../');
 $dotenv->load();
 
@@ -12,7 +14,12 @@ $router->get('login', 'NavController::showLogin');
 $router->get('welcome', 'NavController::showWelcome');
 $router->get('users', 'UserController::get');
 
-$router->post('home', 'RegisterController::register');
-/*$router->post('welcome', 'LoginController::login');*/
+/*$router->post('home', 'RegisterController::register');
+$router->post('welcome', 'LoginController::login');*/
+
+$router->post('home', function($u){
+    $u = new User;
+    return $u->all();
+});
 
 $router->fire();

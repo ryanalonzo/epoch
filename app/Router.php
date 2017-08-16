@@ -31,11 +31,6 @@ class Router
         return $controller->$method();
     }
 
-    public function getRoutes()
-    {
-        return $this->routes;
-    }
-
     public function fire()
     {
         foreach($this->routes as $route) {
