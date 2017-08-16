@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ryanalonzo/vivid.git",
-                "reference": "8089714a6ab5ea1a0574833f4ce0594af41faa48"
+                "reference": "1ae54b6adcae58839ffc9d0d1bdf3371efdb8d3f"
             },
             "require": {
                 "vlucas/phpdotenv": "^2.4"
@@ -29,7 +29,7 @@
                     "email": "yanalonzo25@yahoo.com"
                 }
             ],
-            "time": "2017-08-15T07:03:19+00:00"
+            "time": "2017-08-16T04:00:23+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",

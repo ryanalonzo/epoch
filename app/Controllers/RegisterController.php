@@ -4,25 +4,13 @@ namespace Epoch\Controllers;
 
 use Epoch\Models\User;
 
-class UserController
+class RegisterController
 {
     protected $data;
 
     function __construct($data)
     {
         $this->data = $data;
-    }
-
-    function get()
-    {
-        $user = new User;
-
-        $users = $user
-            ->all();
-
-        return view('users', [
-            'users' => $users
-        ]);
     }
 
     function register()
@@ -41,7 +29,6 @@ class UserController
                 'password' => $data['password'],
                 'address' => $data['address']
             ];
-
             $user->create($input);
         }
     }

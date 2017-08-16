@@ -20,4 +20,9 @@ class NavController
     {
         return view('login');
     }
+
+    function showWelcome()
+    {
+        return view('welcome');
+    }
 }

@@ -6,5 +6,19 @@
 </head>
 <body>
     <h1>Login</h1>
+
+    <form action='welcome' method="POST">
+        <table>
+            <tr>
+                <td><input type="text" name="username" placeholder="Username"></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="password" placeholder="Password"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="login" value="Login"></td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
