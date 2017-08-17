@@ -29,6 +29,12 @@ class NavController
         return view('addNewProduct');
     }
 
+    function checkout()
+    {
+        $_SESSION['cart'] = [];
+        return view('checkout');
+    }
+
     function logout()
     {
         session_start();

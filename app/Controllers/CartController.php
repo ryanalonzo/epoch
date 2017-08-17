@@ -8,7 +8,10 @@ class CartController
 {
     function showCart()
     {
-        return view('cart');
+        $items = array_count_values($_SESSION['cart']);
+        return view('cart', [
+            'items' => $items
+        ]);
     }
 
     function add()

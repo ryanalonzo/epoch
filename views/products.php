@@ -26,7 +26,15 @@
             <li><a href="/">Home</a></li>
             <li><a href="products">Products</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="cart">Cart</a></li>
+            <li>
+                <a href="cart">Cart</a>
+                <?php
+                    if(count($_SESSION['cart'])) {
+                        echo 'Items: ' . count($_SESSION['cart']);
+                    }
+                ?>
+            </li>
+
         </nav>
 
         <ul>

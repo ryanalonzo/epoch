@@ -15,6 +15,7 @@ $router->get('signup', 'NavController::showSignup');
 $router->get('login', 'NavController::showLogin');
 $router->get('logout', 'NavController::logout');
 $router->get('addNewProduct', 'NavController::showAddNewProduct');
+$router->get('checkout', 'NavController::checkout');
 $router->get('products', 'ProductController::showProducts');
 $router->get('cart', 'CartController::showCart');
 
