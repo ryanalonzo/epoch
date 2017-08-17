@@ -61,7 +61,8 @@ class UserController
                 $_SESSION['username'] = $username;
                 $_SESSION['user_type'] = $user_type;
             } else {
-                echo "User not found.";
+                echo "User not found. <a href=login>Go back.</a>";
+                exit;
             }
         }
     }

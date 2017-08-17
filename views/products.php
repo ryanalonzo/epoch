@@ -26,7 +26,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="products">Products</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Cart</a></li>
+            <li><a href="cart">Cart</a></li>
         </nav>
 
         <ul>
@@ -35,6 +35,10 @@
                 <?php echo $product->prod_name; ?><br>
                 &#8369;<?php echo $product->unit_price; ?>
                 </li>
+                <form action="products" method="POST">
+                    <input type="submit" name="add_to_cart" value="Add to cart">
+                    <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
+                </form>
             <?php endforeach; ?>
         </ul>
     <?php endif;?>

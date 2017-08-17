@@ -16,9 +16,11 @@ $router->get('login', 'NavController::showLogin');
 $router->get('logout', 'NavController::logout');
 $router->get('addNewProduct', 'NavController::showAddNewProduct');
 $router->get('products', 'ProductController::showProducts');
+$router->get('cart', 'CartController::showCart');
 
 $router->post('ProductController::addProduct');
 $router->post('UserController::newUser');
 $router->post('UserController::loginUser');
+$router->post('CartController::add');
 
 $router->fire();
