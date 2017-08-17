@@ -2,8 +2,6 @@
 
 namespace Epoch\Controllers;
 
-use Epoch\Models\Customer;
-
 class NavController
 {
     function showHome()
@@ -21,8 +19,16 @@ class NavController
         return view('login');
     }
 
-    function showWelcome()
+    function showProfile()
     {
-        return view('welcome');
+        return view('profile');
+    }
+
+    function logout()
+    {
+        session_start();
+        session_destroy();
+
+        return header("Location: /");
     }
 }

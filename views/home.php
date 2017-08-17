@@ -6,10 +6,13 @@
 </head>
 <body>
     <h1>Home</h1>
-    <?php
-        echo $users;
-    ?>
-    <a href="login">Login</a>
-    <a href="signup">Sign up</a>
+
+    <?php if(!isset($_SESSION['username'])): ?>
+        <a href="login">Login</a>
+        <a href="signup">Sign up</a>
+    <?php else: ?>
+        <a href="profile">Profile</a>
+        <a href="logout">Logout</a>
+    <?php endif; ?>
 </body>
 </html>
