@@ -8,11 +8,15 @@
     <h1>Home</h1>
 
     <?php if(!isset($_SESSION['username'])): ?>
-        <a href="login">Login</a>
-        <a href="signup">Sign up</a>
+        <ul>
+            <li><a href="login">Login</a></li>
+            <li><a href="signup">Sign up</a></li>
+        </ul>
     <?php else: ?>
-        <a href="profile">Profile</a>
-        <a href="logout">Logout</a>
+        <ul>
+            <li><a href="profile">Profile</a></li>
+            <li><a href="logout">Logout</a></li>
+        </ul>
     <?php endif; ?>
 </body>
 </html>

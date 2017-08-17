@@ -2,9 +2,6 @@
 
 namespace Epoch;
 
-use Epoch\Models\User;
-use Epoch\Models\Product;
-
 class Router
 {
     protected $uri;
@@ -23,18 +20,15 @@ class Router
         ];
     }
 
-    public function post(Callable $callable)
+    public function post($controller)
     {
-        $u = new User;
-        $p = new Product;
+        list($controller, $method) = explode('::', $controller);
 
-        if($callable($p)) {
-            return true;
-        }
+        $controller = "\Epoch\Controllers\\$controller";
 
-        if($callable($u)) {
-            return true;
-        }
+        $controller = new $controller;
+
+        return $controller->$method();
     }
 
     public function fire()
