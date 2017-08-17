@@ -3,6 +3,7 @@
 namespace Epoch;
 
 use Epoch\Models\User;
+use Epoch\Models\Product;
 
 class Router
 {
@@ -25,6 +26,11 @@ class Router
     public function post(Callable $callable)
     {
         $u = new User;
+        $p = new Product;
+
+        if($callable($p)) {
+            return true;
+        }
 
         if($callable($u)) {
             return true;

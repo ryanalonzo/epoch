@@ -6,6 +6,12 @@
 </head>
 <body>
     <h1>Products</h1>
+    <nav>
+        <?php if($_SESSION['user_type'] == 'admin'): ?>
+            <a href="addNewProduct">Add new product</a>
+            <a href="profile">Go back</a>
+        <?php endif;?>
+    </nav>
     <ul>
         <?php foreach($products as $product): ?>
             <li>

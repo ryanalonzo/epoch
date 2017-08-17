@@ -24,6 +24,11 @@ class NavController
         return view('profile');
     }
 
+    function showAddNewProduct()
+    {
+        return view('addNewProduct');
+    }
+
     function logout()
     {
         session_start();
