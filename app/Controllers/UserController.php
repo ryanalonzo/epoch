@@ -19,7 +19,7 @@ class UserController
                 'email' => $_POST['email'],
                 'phone_number' => $_POST['phone_number'],
                 'username' => $_POST['username'],
-                'password' => md5($_POST['password']),
+                'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
                 'address' => $_POST['address']
             ];
 
@@ -46,23 +46,23 @@ class UserController
             $u = new User;
 
             $username = $_POST['username'];
-            $password = md5($_POST['password']);
+            $password = $_POST['password'];
 
             $result = $u->where('username', $username)
-                      ->andWhere('password', $password)
                       ->get();
 
-            if(count($result)) {
-                foreach($result as $res) {
-                    $username = $res->username;
-                    $user_type = $res->user_type;
-                }
+            foreach($result as $res) {
+                $username = $res->username;
+                $user_type = $res->user_type;
+                $pass = $res->password;
 
-                $_SESSION['username'] = $username;
-                $_SESSION['user_type'] = $user_type;
-            } else {
-                echo "User not found. <a href=login>Go back.</a>";
-                exit;
+                if(password_verify($password, $pass)) {
+                    $_SESSION['username'] = $username;
+                    $_SESSION['user_type'] = $user_type;
+                } else {
+                    echo "User not found. <a href=login>Go back.</a>";
+                    exit;
+                }
             }
         }
     }
