@@ -41,8 +41,9 @@ header {
 .contact h3 {
     font-family: "Open Sans";
     font-weight: 300;
-    font-size: .9rem;
+    font-size: .85rem;
     margin-right: 10%;
+    letter-spacing: .2rem;
 }
 
 .fb-logo {
@@ -62,34 +63,40 @@ header {
 
 .logo-main {
     margin-left: 20%;
-    margin-top: 3%;
+    margin-top: 4%;
 }
 
 .logo-main h1 {
-    font-size: 2rem;
-    font-family: "Butler";
+    font-size: 2.5rem;
+    font-family: "Times New Roman";
     font-weight: 200;
 }
 
 .logo-main p {
     font-size: .75rem;
-    font-family: "Butler";
-    font-weight: 200;
+    font-family: "Times New Roman";
     letter-spacing: .28rem;
+    margin-right: 10%;
 }
 
 .account {
-    width: 20%;
+    width: 15%;
     margin-top: 2%;
+    opacity: .6;
 }
 
 .account li {
-    margin-right: 20%;
+    margin-right: 15%;
 }
 
+.account li:last-child {
+    margin-right: 0;
+}
 .account ul li a{
     text-decoration: none;
     color: #000;
-    font-family: "Butler";
-    font-weight: 200;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: .85rem;
+    letter-spacing: .2rem;
 }
