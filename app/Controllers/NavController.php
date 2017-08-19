@@ -29,10 +29,9 @@ class NavController
         return view('addNewProduct');
     }
 
-    function checkout()
+    function verify()
     {
-        $_SESSION['cart'] = [];
-        return view('checkout');
+        return view('verify');
     }
 
     function logout()

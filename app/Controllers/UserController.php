@@ -52,11 +52,13 @@ class UserController
                       ->get();
 
             foreach($result as $res) {
+                $id = $res->id;
                 $username = $res->username;
                 $user_type = $res->user_type;
                 $pass = $res->password;
 
                 if(password_verify($password, $pass)) {
+                    $_SESSION['id'] = $id;
                     $_SESSION['username'] = $username;
                     $_SESSION['user_type'] = $user_type;
                 } else {
