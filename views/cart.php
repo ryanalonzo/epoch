@@ -27,17 +27,28 @@ use Epoch\Models\Product;
                     $match = $product->where('id', $key)
                             ->get();
 
-                    foreach($match as $m) :?>
+                    foreach($match as $m) : ?>
                         <tr>
                             <td><?php echo $m->prod_name; ?></td>
                             <td><?php echo $m->unit_price; ?></td>
                             <td><?php echo $item; ?></td>
-                            <?php $total = $m->unit_price * $item;?>
+                            <?php
+                                $total = $m->unit_price * $item;
+                            ?>
                             <td><?php echo $total; ?></td>
-                            <?php $totalPrice += $m->unit_price * $item;?>
+                            <?php $totalPrice += $m->unit_price * $item; ?>
                         </tr>
+                        <?php
+                            if(!isset($ar)) {
+                                $ar = [];
+                            }
+                            $od = ['prod_id' => $m->id, 'quantity' => $item, 'total' => $total];
+                            array_push($ar, $od);
+                            $_SESSION['order_details'] = $ar;
+                        ?>
                     <?php endforeach; ?>
                 <?php endforeach;?>
+
             </tbody>
         </table>
         <p>Total Price: &#8369;<?php echo $totalPrice; ?></p>
