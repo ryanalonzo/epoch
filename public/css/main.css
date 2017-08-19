@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+.clear-fix {
+    overflow: hidden;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.space {
+    height: 900px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 5%;
+}
+
+.contact {
+    margin-top: 2%;
+    width: 15%;
+    opacity: .6;
+}
+
+.contact h3 {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: .9rem;
+    margin-right: 10%;
+}
+
+.fb-logo {
+    margin-right: 10%;
+}
+
+.fb-logo img {
+    height: 1.1rem;
+}
+
+.insta-logo {
+    font-size: 1.2rem;
+}
+.account ul {
+    list-style: none;
+}
+
+.logo-main {
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.logo-main h1 {
+    font-size: 2rem;
+    font-family: "Butler";
+    font-weight: 200;
+}
+
+.logo-main p {
+    font-size: .75rem;
+    font-family: "Butler";
+    font-weight: 200;
+    letter-spacing: .28rem;
+}
+
+.account {
+    width: 20%;
+    margin-top: 2%;
+}
+
+.account li {
+    margin-right: 20%;
+}
+
+.account ul li a{
+    text-decoration: none;
+    color: #000;
+    font-family: "Butler";
+    font-weight: 200;
+}
