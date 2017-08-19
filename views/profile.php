@@ -11,6 +11,8 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="products">Products</a></li>
+                <li><a href="users">Users</a></li>
+                <li><a href="orders">Orders</a></li>
             </ul>
         </nav>
     <?php else: ?>

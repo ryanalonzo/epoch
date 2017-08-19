@@ -7,6 +7,20 @@ use Epoch\Models\OrderDetails;
 
 class OrderController
 {
+    function showOrders()
+    {
+        $order = new Order;
+
+        $orders = $order->table('users')
+           ->join('orders', 'users.id', 'orders.customer_id')
+           ->join('order_details', 'orders.id', 'order_details.order_id')
+           ->join('products', 'order_details.product_id', 'products.id')
+           ->select(['first_name', 'last_name', 'address', 'order_date', 'quantity', 'order_id','price', 'prod_name']);
+
+        return view('orders', [
+            'orders' => $orders
+        ]);
+    }
     function checkout()
     {
         $order = new Order;

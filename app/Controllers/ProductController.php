@@ -29,7 +29,6 @@ class ProductController
 
             $match = $product->where('prod_name', $input['prod_name'])
                   ->get();
-
             if($match) {
                 echo "Product already exists. <a href=addNewProduct>Go back</a>";
                 exit;

@@ -18,6 +18,8 @@ $router->get('addNewProduct', 'NavController::showAddNewProduct');
 $router->get('products', 'ProductController::showProducts');
 $router->get('cart', 'CartController::showCart');
 $router->get('checkout', 'OrderController::checkout');
+$router->get('orders', 'OrderController::showOrders');
+$router->get('users', 'UserController::showUsers');
 
 $router->post('ProductController::addProduct');
 $router->post('UserController::newUser');
