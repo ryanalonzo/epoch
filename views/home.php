@@ -13,7 +13,7 @@
             <div class="contact pull-left clear-fix">
                 <h3 class="pull-left">CONTACT</h3>
                 <div class="fb-logo pull-left">
-                    <img src="media.png" alt="">
+                    <img src="/images/media.png" alt="">
                 </div>
                 <div class="insta-logo pull-left">
                     <i class="fa fa-instagram" aria-hidden="true"></i>
