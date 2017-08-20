@@ -98,7 +98,7 @@
                                         <input type="submit" name="edit" value="EDIT" class="pull-right">
                                         <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
                                     </form>
-                            <?php endif; ?>
+                            <?php endif;?>
                         </div>
                     </div>
                 <?php endif;?>
