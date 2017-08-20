@@ -5,7 +5,6 @@
 
 body {
     font-size: 16px;
-    background: #FFFFFF;
 }
 
 .clear-fix {
@@ -134,13 +133,4 @@ nav li a {
     color: black;
     font-family: "Roboto";
     font-size: .85rem;
-}
-
-.banner {
-    margin-top: 2%;
-}
-
-.banner img {
-    height: auto;
-    width: 100%;
 }

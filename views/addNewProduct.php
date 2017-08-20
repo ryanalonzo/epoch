@@ -7,7 +7,7 @@
 <body>
     <h1>Add New Product</h1>
 
-    <form action="products" method="POST">
+    <form action="products" method="POST" enctype="multipart/form-data">
         <table>
             <tr>
                 <td><input type="text" name="prod_name" placeholder="Product Name"></td>
@@ -17,6 +17,9 @@
             </tr>
             <tr>
                 <td><input type="text" name="stocks" placeholder="Stocks"></td>
+            </tr>
+            <tr>
+                <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
             </tr>
             <tr>
                 <td>

@@ -40,32 +40,47 @@
         </div>
     </header>
 
-    <div class="container">
-        <?php if($_SESSION['user_type'] == 'admin'): ?>
-            <nav class="clear-fix">
-                <ul>
-                    <li class="pull-left"><a href="/">HOME</a></li>
-                    <li class="pull-left"><a href="products">PRODUCTS</a></li>
-                    <li class="pull-left"><a href="users">USERS</a></li>
-                    <li><a href="orders">ORDERS</a></li>
-                </ul>
-            </nav>
-        <?php else: ?>
-            <nav class="clear-fix">
+    <?php if($_SESSION['user_type'] == 'admin'): ?>
+        <nav class="clear-fix">
+            <div class="container">
                 <div class="nav-inner">
                     <ul>
+                        <li class="pull-left"><a href="/">HOME</a></li>
+                        <li class="pull-left"><a href="products">PRODUCTS</a></li>
+                        <li class="pull-left"><a href="users">USERS</a></li>
+                        <li class="pull-left"><a href="orders">ORDERS</a></li>
+                        <li><a href="addNewProduct">ADD NEW</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <?php else: ?>
+        <nav class="clear-fix">
+            <div class="container">
+                <div class="nav-inner">
+                    <ul>
+                        <li class="pull-left"><div style="width: 1%; height: 1px;"></div></li>
                         <li class="pull-left"><a href="/">HOME</a></li>
                         <li class="pull-left"><a href="products">SHOP</a></li>
                         <li class="pull-left"><a href="#">ABOUT</a></li>
                         <li><a href="cart">CART</a></li>
                     </ul>
                 </div>
-            </nav>
-        <?php endif; ?>
-
-        <div class="space">
-
+            </div>
+        </nav>
+    <?php endif; ?>
+    <div class="banner">
+        <div class="container">
+            <img src="/images/2.jpg" alt="">
         </div>
     </div>
+
+
+
+
+
+
+
+    <div class="space"></div>
 </body>
 </html>
