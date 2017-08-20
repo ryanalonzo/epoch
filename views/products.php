@@ -69,8 +69,15 @@
         </nav>
     <?php endif; ?>
 
-
-
+    <div class="image-gallery">
+        <div class="container">
+            <?php foreach($products as $product):?>
+                <div class="item">
+                    <img src="/images/products/<?php echo $product->image_src;?>" >
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
 
     <div class="space"></div>
 </body>
