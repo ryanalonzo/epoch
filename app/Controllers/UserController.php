@@ -6,19 +6,6 @@ use Epoch\Models\User;
 
 class UserController
 {
-    function showUsers()
-    {
-        if($_SESSION['user_type'] == 'admin') {
-            $u = new User;
-
-            $users = $u->all();
-
-            return view('users', [
-                'users' => $users
-            ]);
-        }
-    }
-
     function newUser()
     {
         if(isset($_POST['signup'])) {

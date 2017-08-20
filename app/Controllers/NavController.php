@@ -9,16 +9,6 @@ class NavController
         return view('home');
     }
 
-    function showSignup()
-    {
-        return view('signup');
-    }
-
-    function showLogin()
-    {
-        return view('login');
-    }
-
     function showLoginSignup()
     {
         return view('loginSignup');

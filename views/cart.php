@@ -50,19 +50,7 @@ use Epoch\Models\Product;
     </header>
 
     <?php if($_SESSION['user_type'] == 'admin'): ?>
-        <nav class="clear-fix">
-            <div class="container">
-                <div class="nav-inner">
-                    <ul>
-                        <li class="pull-left"><a href="/">HOME</a></li>
-                        <li class="pull-left"><a href="products">PRODUCTS</a></li>
-                        <li class="pull-left"><a href="users">USERS</a></li>
-                        <li class="pull-left"><a href="orders">ORDERS</a></li>
-                        <li><a href="addNewProduct">ADD NEW</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <?php header('location: /'); ?>
     <?php else: ?>
         <nav class="clear-fix">
             <div class="container">
@@ -118,7 +106,7 @@ use Epoch\Models\Product;
                                 ?>
                                 <td><?php echo $total; ?></td>
                                 <td>
-                                    <form action="#" method="POST">
+                                    <form action="cart" method="POST">
                                         <input type="submit" name="remove" value="Remove">
                                         <input type="hidden" name="cart_id" value="<?php echo $key?>">
                                     </form>
@@ -135,18 +123,12 @@ use Epoch\Models\Product;
                             ?>
                         <?php endforeach; ?>
                     <?php endforeach;?>
-                    <?php
-                        if(isset($_POST['remove'])) {
-                            $cartID = $_POST['cart_id'];
-                            $_SESSION['cart'] = array_values(array_diff($_SESSION['cart'],array($cartID)));
-
-                            header('location: cart');
-                        }
-                    ?>
                     <tr>
                        <td colspan="6">
                             <p>Total Price: &#8369;<?php echo $totalPrice; ?></p>
-                            <a href="checkout">Checkout</a>
+                            <button>
+                                <a href="checkout">Checkout</a>
+                            </button>
                         </td>
                     </tr>
                 </tbody>

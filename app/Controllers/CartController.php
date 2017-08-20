@@ -32,4 +32,14 @@ class CartController
             array_push($_SESSION['cart'], $id);
         }
     }
+
+    function remove()
+    {
+        if(isset($_POST['remove'])) {
+            $cartID = $_POST['cart_id'];
+            $_SESSION['cart'] = array_values(array_diff($_SESSION['cart'],array($cartID)));
+
+            header('Location: cart');
+        }
+    }
 }

@@ -40,19 +40,7 @@
     </header>
 
     <?php if($_SESSION['user_type'] == 'admin'): ?>
-        <nav class="clear-fix">
-            <div class="container">
-                <div class="nav-inner">
-                    <ul>
-                        <li class="pull-left"><a href="/">HOME</a></li>
-                        <li class="pull-left"><a href="products">PRODUCTS</a></li>
-                        <li class="pull-left"><a href="users">USERS</a></li>
-                        <li class="pull-left"><a href="orders">ORDERS</a></li>
-                        <li><a href="addNewProduct">ADD NEW</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <?php header('location: /'); ?>
     <?php else: ?>
         <nav class="clear-fix">
             <div class="container">
@@ -137,5 +125,7 @@
             </form>
         </div>
     </div>
+
+    <div class="space"></div>
 </body>
 </html>

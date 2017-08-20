@@ -29,6 +29,11 @@
                     <ul>
                         <li class="pull-right"><a href="loginSignup">LOGIN / SIGNUP</a></li>
                     </ul>
+                <?php elseif($_SESSION['user_type'] == 'admin'): ?>
+                    <ul>
+                        <li class="pull-left">USER: <?php echo $_SESSION['user_type']; ?></li>
+                        <li><a href="logout">LOGOUT</a></li>
+                    </ul>
                 <?php else: ?>
                     <ul>
                         <li class="pull-left">USER: <?php echo $_SESSION['username']; ?></li>
@@ -44,11 +49,11 @@
             <div class="container">
                 <div class="nav-inner">
                     <ul>
+                        <li class="pull-left"><div style="width: 1%; height: 1px;"></div></li>
                         <li class="pull-left"><a href="/">HOME</a></li>
                         <li class="pull-left"><a href="products">PRODUCTS</a></li>
-                        <li class="pull-left"><a href="users">USERS</a></li>
                         <li class="pull-left"><a href="orders">ORDERS</a></li>
-                        <li><a href="addNewProduct">ADD NEW</a></li>
+                        <li class="pull-left"><a href="addNewProduct">ADD NEW</a></li>
                     </ul>
                 </div>
             </div>

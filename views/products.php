@@ -49,9 +49,9 @@
             <div class="container">
                 <div class="nav-inner">
                     <ul>
+                        <li class="pull-left"><div style="width: 1%; height: 1px;"></div></li>
                         <li class="pull-left"><a href="/">HOME</a></li>
                         <li class="pull-left"><a href="products">PRODUCTS</a></li>
-                        <li class="pull-left"><a href="users">USERS</a></li>
                         <li class="pull-left"><a href="orders">ORDERS</a></li>
                         <li><a href="addNewProduct">ADD NEW</a></li>
                     </ul>
@@ -88,10 +88,17 @@
                         <img src="/images/products/<?php echo $product->image_src;?>" >
                         <div class="desc">
                             <p class="pull-left"><?php echo $product->prod_name . ' &#8369;' . $product->unit_price;?></p>
-                            <form action="products" method="POST">
-                                <input type="submit" name="add_to_cart" value="ADD" class="pull-right">
-                                <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
-                            </form>
+                            <?php if($_SESSION['user_type'] == 'Customer'):?>
+                                <form action="products" method="POST">
+                                    <input type="submit" name="add_to_cart" value="ADD" class="pull-right">
+                                    <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
+                                </form>
+                            <?php elseif($_SESSION['user_type'] == 'admin'): ?>
+                                    <form action="products" method="POST">
+                                        <input type="submit" name="edit" value="EDIT" class="pull-right">
+                                        <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
+                                    </form>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endif;?>
