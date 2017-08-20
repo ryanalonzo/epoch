@@ -51,20 +51,22 @@ class UserController
             $result = $u->where('username', $username)
                       ->get();
 
-            foreach($result as $res) {
-                $id = $res->id;
-                $username = $res->username;
-                $user_type = $res->user_type;
-                $pass = $res->password;
+            if(count($result)) {
+                foreach($result as $res) {
+                    $id = $res->id;
+                    $username = $res->username;
+                    $user_type = $res->user_type;
+                    $pass = $res->password;
 
-                if(password_verify($password, $pass)) {
-                    $_SESSION['id'] = $id;
-                    $_SESSION['username'] = $username;
-                    $_SESSION['user_type'] = $user_type;
-                } else {
-                    echo "User not found. <a href=login>Go back.</a>";
-                    exit;
+                    if(password_verify($password, $pass)) {
+                        $_SESSION['id'] = $id;
+                        $_SESSION['username'] = $username;
+                        $_SESSION['user_type'] = $user_type;
+                    }
                 }
+            } else {
+                echo "<script>alert('User not found.');window.location='loginSignup'</script>";
+                exit;
             }
         }
     }

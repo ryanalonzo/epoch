@@ -65,7 +65,7 @@
 
     <div class="container">
         <div class="login pull-left">
-            <form action="/" method="POST">
+            <form method="POST">
             <h3>Login</h3>
                 <table>
                     <tr>
