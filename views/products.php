@@ -30,10 +30,15 @@
                         <li>USER: <?php echo $_SESSION['user_type'];?></li>
                         <li><a href="logout">LOGOUT</a></li>
                     </ul>
-                <?php else: ?>
+                <?php elseif($_SESSION['user_type'] == 'Customer'): ?>
                     <ul>
                         <li class="pull-left">USER: <?php echo $_SESSION['username']; ?></li>
                         <li><a href="logout">LOGOUT</a></li>
+                    </ul>
+                <?php else: ?>
+                    <ul>
+                        <li class="pull-left"><a href="login">LOGIN</a></li>
+                        <li><a href="signup">SIGNUP</a></li>
                     </ul>
                 <?php endif; ?>
             </div>
@@ -80,7 +85,7 @@
         <div class="container">
             <?php foreach($products as $product):?>
                 <?php if($product->stocks):?>
-                    <div class="item">
+                    <div class="item pull-left">
                         <img src="/images/products/<?php echo $product->image_src;?>" >
                         <div class="desc">
                             <p class="pull-left"><?php echo $product->prod_name . ' &#8369;' . $product->unit_price;?></p>
