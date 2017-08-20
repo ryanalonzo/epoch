@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/loginSignup.css">
     <script src="https://use.fontawesome.com/d3f0a5537e.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-    <title>Products</title>
+    <title>Login/Signup</title>
 </head>
 <body>
     <header class="clear-fix">
@@ -25,19 +25,14 @@
                 <p class="pull-right">TIME WILL ALWAYS FOLLOW</p>
             </div>
             <div class="account pull-right">
-                <?php if($_SESSION['user_type'] == 'admin'): ?>
+                <?php if(!isset($_SESSION['username'])): ?>
                     <ul>
-                        <li class="pull-left">USER: <?php echo $_SESSION['user_type'];?></li>
-                        <li><a href="logout">LOGOUT</a></li>
-                    </ul>
-                <?php elseif($_SESSION['user_type'] == 'Customer'): ?>
-                    <ul>
-                        <li class="pull-left">USER: <?php echo $_SESSION['username']; ?></li>
-                        <li><a href="logout">LOGOUT</a></li>
+                        <li class="pull-right"><a href="loginSignup">LOGIN / SIGNUP</a></li>
                     </ul>
                 <?php else: ?>
                     <ul>
-                        <li class="pull-right"><a href="loginSignup">LOGIN / SIGNUP</a></li>
+                        <li class="pull-left">USER: <?php echo $_SESSION['username']; ?></li>
+                        <li><a href="logout">LOGOUT</a></li>
                     </ul>
                 <?php endif; ?>
             </div>
@@ -80,25 +75,67 @@
         </nav>
     <?php endif; ?>
 
-    <div class="image-gallery">
-        <div class="container">
-            <?php foreach($products as $product):?>
-                <?php if($product->stocks):?>
-                    <div class="item pull-left">
-                        <img src="/images/products/<?php echo $product->image_src;?>" >
-                        <div class="desc">
-                            <p class="pull-left"><?php echo $product->prod_name . ' &#8369;' . $product->unit_price;?></p>
-                            <form action="products" method="POST">
-                                <input type="submit" name="add_to_cart" value="ADD" class="pull-right">
-                                <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
-                            </form>
-                        </div>
-                    </div>
-                <?php endif;?>
-            <?php endforeach; ?>
+    <div class="container">
+        <div class="login pull-left">
+            <form action="/" method="POST">
+            <h3>Login</h3>
+                <table>
+                    <tr>
+                        <td><input type="text" name="username" placeholder="Username"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="password" placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="login" value="Login"></td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </div>
 
-    <div class="space"></div>
+    <div class="container">
+        <div class="signup pull-right">
+            <form action="loginSignup" method="POST" class="pull-right">
+            <h3>Signup</h3>
+                <table>
+                    <tr>
+                        <td><input type="text" name="first_name" placeholder="First Name"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="last_name" placeholder="Last Name"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="middle_name" placeholder="Middle Name"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="email" placeholder="Email"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="phone_number" placeholder="Phone Number"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="username" placeholder="Username"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="password" placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="address" placeholder="Address"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" name="signup" value="Save">
+                            <button>
+                                <a href='/'>Back</a>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

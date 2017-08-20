@@ -42,8 +42,7 @@ use Epoch\Models\Product;
                     </ul>
                 <?php else: ?>
                     <ul>
-                        <li class="pull-left"><a href="login">LOGIN</a></li>
-                        <li><a href="signup">SIGNUP</a></li>
+                        <li class="pull-right"><a href="loginSignup">LOGIN / SIGNUP</a></li>
                     </ul>
                 <?php endif; ?>
             </div>
@@ -126,12 +125,6 @@ use Epoch\Models\Product;
                                 </td>
                                 <?php $totalPrice += $m->unit_price * $item; ?>
                             </tr>
-                            <tr>
-                               <td colspan="6">
-                                    <p>Total Price: &#8369;<?php echo $totalPrice; ?></p>
-                                    <a href="checkout">Checkout</a>
-                                </td>
-                            </tr>
                             <?php
                                 if(!isset($ar)) {
                                     $ar = [];
@@ -150,6 +143,12 @@ use Epoch\Models\Product;
                             header('location: cart');
                         }
                     ?>
+                    <tr>
+                       <td colspan="6">
+                            <p>Total Price: &#8369;<?php echo $totalPrice; ?></p>
+                            <a href="checkout">Checkout</a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -158,7 +157,7 @@ use Epoch\Models\Product;
         <div class="container">
             <div class="empty">
                 <h1>EMPTY CART</h1>
-                <a href="products">Shop Now!</a>
+                <button><a href="products">Shop Now!</a></button>
             </div>
         </div>
     <?php endif; ?>

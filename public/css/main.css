@@ -136,6 +136,10 @@ nav li a {
     font-size: .85rem;
 }
 
+nav li a:hover {
+    border-bottom: 1px solid black;
+}
+
 .banner {
     margin-top: 2%;
 }

@@ -13,6 +13,7 @@ $router->get('', 'NavController::showHome');
 $router->get('profile', 'NavController::showProfile');
 $router->get('signup', 'NavController::showSignup');
 $router->get('login', 'NavController::showLogin');
+$router->get('loginSignup', 'NavController::showLoginSignup');
 $router->get('logout', 'NavController::logout');
 $router->get('addNewProduct', 'NavController::showAddNewProduct');
 $router->get('products', 'ProductController::showProducts');

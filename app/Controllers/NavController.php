@@ -19,6 +19,11 @@ class NavController
         return view('login');
     }
 
+    function showLoginSignup()
+    {
+        return view('loginSignup');
+    }
+
     function showProfile()
     {
         return view('profile');

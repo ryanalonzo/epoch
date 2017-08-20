@@ -27,8 +27,7 @@
             <div class="account pull-right">
                 <?php if(!isset($_SESSION['username'])): ?>
                     <ul>
-                        <li class="pull-left"><a href="login">LOGIN</a></li>
-                        <li><a href="signup">SIGN UP</a></li>
+                        <li class="pull-right"><a href="loginSignup">LOGIN / SIGNUP</a></li>
                     </ul>
                 <?php else: ?>
                     <ul>
