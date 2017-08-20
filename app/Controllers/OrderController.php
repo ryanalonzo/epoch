@@ -4,6 +4,7 @@ namespace Epoch\Controllers;
 
 use Epoch\Models\Order;
 use Epoch\Models\OrderDetails;
+use Epoch\Models\Product;
 
 class OrderController
 {
@@ -50,6 +51,17 @@ class OrderController
                 'price'     => $detail['total']
             ];
             $od->create($input);
+
+            $p = new Product;
+
+            $product = $p->where('id', $detail['prod_id'])
+              ->get();
+
+            foreach($product as $prod) {
+                $newQuantity = $prod->stocks - $detail['quantity'];
+            }
+
+            $p->update(['stocks' => $newQuantity],$detail['prod_id']);
         }
 
         $_SESSION['cart'] = [];
