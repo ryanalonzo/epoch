@@ -7,7 +7,7 @@
 <body>
     <h1>Login</h1>
 
-    <form action="profile" method="POST">
+    <form action="/" method="POST">
         <table>
             <tr>
                 <td><input type="text" name="username" placeholder="Username"></td>

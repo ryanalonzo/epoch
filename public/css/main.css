@@ -41,7 +41,7 @@ header {
 .contact h3 {
     font-family: "Open Sans";
     font-weight: 300;
-    font-size: .85rem;
+    font-size: .8rem;
     margin-right: 10%;
     letter-spacing: .2rem;
 }
@@ -62,7 +62,7 @@ header {
 }
 
 .logo-main {
-    margin-left: 15%;
+    margin-left: 17%;
     margin-top: 4%;
 }
 
@@ -80,7 +80,7 @@ header {
 }
 
 .account {
-    width: 15%;
+    width: 20%;
     margin-top: 2%;
     opacity: .6;
 }
@@ -92,6 +92,14 @@ header {
 .account li:last-child {
     margin-right: 0;
 }
+
+.account ul li {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: .85rem;
+    letter-spacing: .1rem;
+}
+
 .account ul li a{
     text-decoration: none;
     color: #000;
@@ -100,3 +108,30 @@ header {
     font-size: .85rem;
     letter-spacing: .2rem;
 }
+
+nav {
+    width: 100%;
+    margin-top: 3%;
+}
+
+.nav-inner {
+    width: 55%;
+    margin: 0 auto;
+}
+
+nav li {
+    list-style: none;
+    margin-right: 22%;
+}
+
+nav li:last-child {
+    margin: 0;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto";
+    font-size: .85rem;
+}
+

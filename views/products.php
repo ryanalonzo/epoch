@@ -10,7 +10,7 @@
     <?php if($_SESSION['user_type'] == 'admin'): ?>
         <nav>
             <a href="addNewProduct">Add new product</a>
-            <a href="profile">Go back</a>
+            <a href="/">Go back</a>
         </nav>
 
         <ul>

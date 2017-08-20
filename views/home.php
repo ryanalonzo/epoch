@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://use.fontawesome.com/d3f0a5537e.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <title>Home</title>
 </head>
 <body>
@@ -31,7 +32,7 @@
                     </ul>
                 <?php else: ?>
                     <ul>
-                        <li class="pull-left"><a href="profile">PROFILE</a></li>
+                        <li class="pull-left">USER: <?php echo $_SESSION['username']; ?></li>
                         <li><a href="logout">LOGOUT</a></li>
                     </ul>
                 <?php endif; ?>
@@ -40,7 +41,27 @@
     </header>
 
     <div class="container">
-
+        <?php if($_SESSION['user_type'] == 'admin'): ?>
+            <nav class="clear-fix">
+                <ul>
+                    <li class="pull-left"><a href="/">HOME</a></li>
+                    <li class="pull-left"><a href="products">PRODUCTS</a></li>
+                    <li class="pull-left"><a href="users">USERS</a></li>
+                    <li><a href="orders">ORDERS</a></li>
+                </ul>
+            </nav>
+        <?php else: ?>
+            <nav class="clear-fix">
+                <div class="nav-inner">
+                    <ul>
+                        <li class="pull-left"><a href="/">HOME</a></li>
+                        <li class="pull-left"><a href="products">SHOP</a></li>
+                        <li class="pull-left"><a href="#">ABOUT</a></li>
+                        <li><a href="cart">CART</a></li>
+                    </ul>
+                </div>
+            </nav>
+        <?php endif; ?>
 
         <div class="space">
 
