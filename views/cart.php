@@ -36,6 +36,13 @@ use Epoch\Models\Product;
                                 $total = $m->unit_price * $item;
                             ?>
                             <td><?php echo $total; ?></td>
+                            <td>
+                                <form action="#" method="POST">
+                                    <input type="submit" name="remove" value="Remove">
+                                    <input type="hidden" name="cart_id" value="<?php echo $key?>">
+                                </form>
+                            </td>
+
                             <?php $totalPrice += $m->unit_price * $item; ?>
                         </tr>
                         <?php
@@ -48,6 +55,13 @@ use Epoch\Models\Product;
                         ?>
                     <?php endforeach; ?>
                 <?php endforeach;?>
+                <?php
+                    if(isset($_POST['remove'])) {
+                        $cartID = $_POST['cart_id'];
+                        $_SESSION['cart'] = array_values(array_diff($_SESSION['cart'],array($cartID)));
+                        header('location: cart');
+                    }
+                ?>
 
             </tbody>
         </table>

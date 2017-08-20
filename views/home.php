@@ -63,7 +63,13 @@
                         <li class="pull-left"><a href="/">HOME</a></li>
                         <li class="pull-left"><a href="products">SHOP</a></li>
                         <li class="pull-left"><a href="#">ABOUT</a></li>
-                        <li><a href="cart">CART</a></li>
+                        <li>
+                            <?php if(count($_SESSION['cart'])): ?>
+                                <a href="cart" style="color: red;">CART</a>
+                            <?php else: ?>
+                                <a href="cart">CART</a>
+                            <?php endif; ?>
+                        </li>
                     </ul>
                 </div>
             </div>

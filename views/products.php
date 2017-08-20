@@ -85,7 +85,7 @@
                         <div class="desc">
                             <p class="pull-left"><?php echo $product->prod_name . ' &#8369;' . $product->unit_price;?></p>
                             <form action="products" method="POST">
-                                <input type="submit" name="add_to_cart" value="ADD">
+                                <input type="submit" name="add_to_cart" value="ADD" class="pull-right">
                                 <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
                             </form>
                         </div>

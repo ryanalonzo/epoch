@@ -136,11 +136,12 @@ nav li a {
 }
 
 .image-gallery {
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 .item {
-    margin: .49%;
+    margin-right: .99%;
+    margin-bottom: 3%;
     border: 1px solid #ccc;
     float: left;
     width: 250px;
@@ -159,5 +160,10 @@ nav li a {
 span {
     color: red;
     font-size: .85rem;
+}
+
+.desc input[type=submit] {
+    font-family: "Open Sans";
+    font-weight: 300;
 }
 
