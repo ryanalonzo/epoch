@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/loginSignup.css">
+    <link rel="stylesheet" href="/css/editProduct.css">
     <script src="https://use.fontawesome.com/d3f0a5537e.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-    <title>Login/Signup</title>
+    <title>Edit Product</title>
 </head>
 <body>
     <header class="clear-fix">
@@ -25,14 +25,19 @@
                 <p class="pull-right">TIME WILL ALWAYS FOLLOW</p>
             </div>
             <div class="account pull-right">
-                <?php if(!isset($_SESSION['username'])): ?>
+                <?php if($_SESSION['user_type'] == 'admin'): ?>
                     <ul>
-                        <li class="pull-right"><a href="loginSignup">LOGIN / SIGNUP</a></li>
+                        <li class="pull-left">USER: <?php echo $_SESSION['user_type'];?></li>
+                        <li><a href="logout">LOGOUT</a></li>
                     </ul>
-                <?php else: ?>
+                <?php elseif($_SESSION['user_type'] == 'Customer'): ?>
                     <ul>
                         <li class="pull-left">USER: <?php echo $_SESSION['username']; ?></li>
                         <li><a href="logout">LOGOUT</a></li>
+                    </ul>
+                <?php else: ?>
+                    <ul>
+                        <li class="pull-right"><a href="loginSignup">LOGIN / SIGNUP</a></li>
                     </ul>
                 <?php endif; ?>
             </div>
@@ -40,7 +45,19 @@
     </header>
 
     <?php if($_SESSION['user_type'] == 'admin'): ?>
-        <?php header('location: /'); ?>
+        <nav class="clear-fix">
+            <div class="container">
+                <div class="nav-inner">
+                    <ul>
+                        <li class="pull-left"><div style="width: 1%; height: 1px;"></div></li>
+                        <li class="pull-left"><a href="/">HOME</a></li>
+                        <li class="pull-left"><a href="products">PRODUCTS</a></li>
+                        <li class="pull-left"><a href="orders">ORDERS</a></li>
+                        <li><a href="addNewProduct">ADD NEW</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <?php else: ?>
         <nav class="clear-fix">
             <div class="container">
@@ -62,62 +79,33 @@
             </div>
         </nav>
     <?php endif; ?>
+    <?php
+        $prodDetails = $_SESSION['prod_details'];
 
+        foreach($prodDetails as $detail) {
+
+        }
+    ?>
     <div class="container">
-        <div class="login pull-left">
-            <form action="/" method="POST">
-            <h3>Login</h3>
+        <div class="edit">
+            <h1>EDIT PRODUCT</h1>
+            <form method="POST">
                 <table>
                     <tr>
-                        <td><input type="text" name="username" placeholder="Username"></td>
+                        <td><input type="text" name="prod_name" value="<?php echo $detail->prod_name; ?>" placeholder="Product Name"></td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="password" placeholder="Password"></td>
+                        <td><input type="text" name="unit_price" value="<?php echo $detail->unit_price; ?>" placeholder="Price"></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" name="login" value="Login"></td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="signup pull-right">
-            <form action="loginSignup" method="POST" class="pull-right">
-            <h3>Signup</h3>
-                <table>
-                    <tr>
-                        <td><input type="text" name="first_name" placeholder="First Name"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="last_name" placeholder="Last Name"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="middle_name" placeholder="Middle Name"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="email" placeholder="Email"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="phone_number" placeholder="Phone Number"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="username" placeholder="Username"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="password" name="password" placeholder="Password"></td>
+                        <td><input type="text" name="stocks" value="<?php echo $detail->stocks; ?>" placeholder="Stocks"></td>
                     </tr>
                     <tr>
                         <td>
-                            <textarea name="address" placeholder="Address"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="submit" name="signup" value="Save">
+                            <input type="submit" name="update" value="Save">
+                            <input type="hidden" name="prod_id" value="<?php echo $detail->id; ?>">
                             <button>
-                                <a href='/'>Back</a>
+                                <a href='products'>Back</a>
                             </button>
                         </td>
                     </tr>
@@ -125,7 +113,5 @@
             </form>
         </div>
     </div>
-
-    <div class="space"></div>
 </body>
 </html>

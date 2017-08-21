@@ -24,6 +24,11 @@ class NavController
         return view('addNewProduct');
     }
 
+    function showEditProduct()
+    {
+        return view('editProduct');
+    }
+
     function verify()
     {
         return view('verify');

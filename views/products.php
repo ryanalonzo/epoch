@@ -94,11 +94,25 @@
                                     <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
                                 </form>
                             <?php elseif($_SESSION['user_type'] == 'admin'): ?>
-                                    <form action="products" method="POST">
+                                    <form action="editProduct" method="POST">
                                         <input type="submit" name="edit" value="EDIT" class="pull-right">
                                         <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
                                     </form>
                             <?php endif;?>
+                        </div>
+                    </div>
+                <?php elseif($_SESSION['user_type'] == 'admin'): ?>
+                    <div class="item pull-left">
+                        <img src="/images/products/<?php echo $product->image_src;?>" >
+                        <div class="desc">
+                            <p class="pull-left">
+                                <?php echo $product->prod_name . ' &#8369;' . $product->unit_price;?>
+                                <span>OUT OF STOCK</span>
+                            </p>
+                            <form action="editProduct" method="POST">
+                                <input type="submit" name="edit" value="EDIT" class="pull-right">
+                                <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
+                            </form>
                         </div>
                     </div>
                 <?php endif;?>

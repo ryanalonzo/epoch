@@ -78,4 +78,39 @@ class ProductController
             }
         }
     }
+
+    function editProduct()
+    {
+        $product = new Product;
+
+        if(isset($_POST['edit'])) {
+            $prodID = $_POST['prod_id'];
+
+            $prodDetails = $product->where('id', $prodID)
+                                   ->get();
+
+            if(!isset($_SESSION['prodDetails'])) {
+                $_SESSION['prod_details'] = [];
+            }
+
+            $_SESSION['prod_details'] = $prodDetails;
+
+        }
+    }
+
+    function updateProduct()
+    {
+        if(isset($_POST['update'])) {
+            $product = new Product;
+
+            $input = [
+                'prod_name' => $_POST['prod_name'],
+                'unit_price'=> $_POST['unit_price'],
+                'stocks'    => $_POST['stocks']
+            ];
+
+            $product->update($input, $_POST['prod_id']);
+            echo "<script>alert('Successfully Updated!.');window.location = 'products'</script>";
+        }
+    }
 }
