@@ -13,14 +13,14 @@ class UserController
             $u = new User;
 
             $input = [
-                'first_name' => $_POST['first_name'],
-                'last_name' => $_POST['last_name'],
-                'middle_name' => $_POST['middle_name'],
-                'email' => $_POST['email'],
-                'phone_number' => $_POST['phone_number'],
-                'username' => $_POST['username'],
-                'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-                'address' => $_POST['address']
+                'first_name' => htmlentities($_POST['first_name'], ENT_QUOTES),
+                'last_name' => htmlentities($_POST['last_name'], ENT_QUOTES),
+                'middle_name' => htmlentities($_POST['middle_name'], ENT_QUOTES),
+                'email' => htmlentities($_POST['email'], ENT_QUOTES),
+                'phone_number' => htmlentities($_POST['phone_number'], ENT_QUOTES),
+                'username' => htmlentities($_POST['username'], ENT_QUOTES),
+                'password' => htmlentities(password_hash($_POST['password'], PASSWORD_DEFAULT), ENT_QUOTES),
+                'address' => htmlentities($_POST['address'], ENT_QUOTES)
             ];
 
             if(!empty($input['first_name']) && !empty($input['last_name']) &&
@@ -45,8 +45,8 @@ class UserController
 
             $u = new User;
 
-            $username = $_POST['username'];
-            $password = $_POST['password'];
+            $username = htmlentities($_POST['username'], ENT_QUOTES);
+            $password = htmlentities($_POST['password'], ENT_QUOTES);
 
             $result = $u->where('username', $username)
                       ->get();

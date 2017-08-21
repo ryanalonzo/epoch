@@ -69,10 +69,10 @@
             <h3>Login</h3>
                 <table>
                     <tr>
-                        <td><input type="text" name="username" placeholder="Username"></td>
+                        <td><input type="text" name="username" placeholder="Username" autocomplete="off"></td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="password" placeholder="Password"></td>
+                        <td><input type="password" name="password" placeholder="Password" autocomplete="off"></td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="login" value="Login"></td>
@@ -88,29 +88,29 @@
             <h3>Signup</h3>
                 <table>
                     <tr>
-                        <td><input type="text" name="first_name" placeholder="First Name"></td>
+                        <td><input type="text" name="first_name" placeholder="First Name" autocomplete="off"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="last_name" placeholder="Last Name"></td>
+                        <td><input type="text" name="last_name" placeholder="Last Name" autocomplete="off"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="middle_name" placeholder="Middle Name"></td>
+                        <td><input type="text" name="middle_name" placeholder="Middle Name" autocomplete="off"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="email" placeholder="Email"></td>
+                        <td><input type="text" name="email" placeholder="Email" autocomplete="off"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="phone_number" placeholder="Phone Number"></td>
+                        <td><input type="text" name="phone_number" placeholder="Phone Number" autocomplete="off"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="username" placeholder="Username"></td>
+                        <td><input type="text" name="username" placeholder="Username" autocomplete="off"></td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="password" placeholder="Password"></td>
+                        <td><input type="password" name="password" placeholder="Password" autocomplete="off"></td>
                     </tr>
                     <tr>
                         <td>
-                            <textarea name="address" placeholder="Address"></textarea>
+                            <textarea name="address" placeholder="Address" autocomplete="off"></textarea>
                         </td>
                     </tr>
                     <tr>

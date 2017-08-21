@@ -86,13 +86,13 @@
                 <form action="products" method="POST" enctype="multipart/form-data">
                     <table>
                         <tr>
-                            <td><input type="text" name="prod_name" placeholder="Product Name"></td>
+                            <td><input type="text" name="prod_name" placeholder="Product Name" autocomplete="off"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="unit_price" placeholder="Price"></td>
+                            <td><input type="text" name="unit_price" placeholder="Price" autocomplete="off"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="stocks" placeholder="Stocks"></td>
+                            <td><input type="text" name="stocks" placeholder="Stocks" autocomplete="off"></td>
                         </tr>
                         <tr>
                             <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
