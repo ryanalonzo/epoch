@@ -80,34 +80,42 @@
         </nav>
     <?php endif; ?>
 
-        <div class="container">
-            <div class="add-new">
-                <h1>ADD NEW PRODUCT</h1>
-                <form action="products" method="POST" enctype="multipart/form-data">
-                    <table>
-                        <tr>
-                            <td><input type="text" name="prod_name" placeholder="Product Name" autocomplete="off"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="unit_price" placeholder="Price" autocomplete="off"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="stocks" placeholder="Stocks" autocomplete="off"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="submit" name="add" value="Save">
-                                <button>
-                                    <a href='products'>Back</a>
-                                </button>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
+    <div class="container">
+        <div class="add-new">
+            <h1>ADD NEW PRODUCT</h1>
+            <form action="products" method="POST" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td><input type="text" name="prod_name" placeholder="Product Name" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="unit_price" placeholder="Price" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="stocks" placeholder="Stocks" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" name="add" value="Save">
+                            <button>
+                                <a href='products'>Back</a>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </div>
+    </div>
+
+    <div class="space"></div>
+
+    <footer>
+        <div class="container">
+            <p>Epoch Watches<br>&copy;2017</p>
+        </div>
+    </footer>
 </body>
 </html>

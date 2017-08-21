@@ -79,18 +79,17 @@
             </div>
         </nav>
     <?php endif; ?>
+
     <div class="banner">
         <div class="container">
             <img src="/images/2.jpg" alt="">
         </div>
     </div>
 
-
-
-
-
-
-
-    <div class="space"></div>
+    <footer>
+        <div class="container">
+            <p>Epoch Watches<br>&copy;2017</p>
+        </div>
+    </footer>
 </body>
 </html>

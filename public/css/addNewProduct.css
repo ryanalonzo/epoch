@@ -20,7 +20,7 @@ body {
 }
 
 .space {
-    height: 900px;
+    height: 260px;
 }
 
 .container {
@@ -184,4 +184,18 @@ nav li a:hover {
 
 .add-new table {
     margin: 0 auto;
+}
+
+footer {
+    background: #ddd;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 5%;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 1rem;
 }

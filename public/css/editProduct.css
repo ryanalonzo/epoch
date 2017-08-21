@@ -195,3 +195,17 @@ nav li a:hover {
     width: 100%;
     height: auto;
 }
+
+footer {
+    background: #ddd;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 5%;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 1rem;
+}

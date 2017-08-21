@@ -19,10 +19,6 @@ body {
     float: right;
 }
 
-.space {
-    height: 900px;
-}
-
 .container {
     width: 80%;
     margin: auto;
@@ -185,3 +181,16 @@ span {
     font-size: .75rem;
 }
 
+footer {
+    background: #ddd;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 5%;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 1rem;
+}

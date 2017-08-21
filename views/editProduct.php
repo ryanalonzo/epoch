@@ -113,5 +113,13 @@
             </form>
         </div>
     </div>
+
+    <div class="space"></div>
+
+    <footer>
+        <div class="container">
+            <p>Epoch Watches<br>&copy;2017</p>
+        </div>
+    </footer>
 </body>
 </html>
