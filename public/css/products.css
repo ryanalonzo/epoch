@@ -149,6 +149,7 @@ nav li a:hover {
     border: 1px solid #ccc;
     width: 235px;
     height: 200px;
+    text-align: center;
 }
 
 .item:last-child {
@@ -160,7 +161,7 @@ nav li a:hover {
 }
 
 .item img {
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
