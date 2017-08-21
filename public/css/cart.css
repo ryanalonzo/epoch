@@ -188,12 +188,13 @@ table, td, th {
 }
 
 th {
-    font-family: "Roboto";
+    font-family: "Open Sans";
     font-size: .95rem;
 }
 
 td {
-    font-family: "Roboto";
+    font-family: "Open Sans";
+    font-size: .85rem;
     text-align: center;
 }
 
