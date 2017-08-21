@@ -135,11 +135,18 @@ use Epoch\Models\Product;
             </table>
         </div>
 
-    <?php else: ?>
+    <?php elseif(isset($_SESSION['user_type'])): ?>
         <div class="container">
             <div class="empty">
                 <h1>EMPTY CART</h1>
                 <button><a href="products">Shop Now!</a></button>
+            </div>
+        </div>
+    <?php else: ?>
+        <div class="container">
+            <div class="empty">
+                <h1>EMPTY CART</h1>
+                <button><a href="loginSignup">Please login or signup to continue</a></button>
             </div>
         </div>
     <?php endif; ?>
