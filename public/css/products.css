@@ -140,15 +140,19 @@ nav li a:hover {
 }
 
 .image-gallery {
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .item {
-    margin-right: .99%;
-    margin-bottom: 4%;
+    margin-right: 2.4%;
+    margin-bottom: 10%;
     border: 1px solid #ccc;
-    width: 250px;
+    width: 235px;
     height: 200px;
+}
+
+.item:last-child {
+    margin-right: 0;
 }
 
 .item:hover {
@@ -172,10 +176,11 @@ span {
 .desc input[type=submit] {
     font-family: "Open Sans";
     font-weight: 300;
-    padding: 1%;
+    padding: .75%;
 }
 
 .desc p {
     font-family: "Open Sans";
+    font-size: .75rem;
 }
 
