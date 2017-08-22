@@ -49,7 +49,8 @@ class UserController
             $password = htmlentities($_POST['password'], ENT_QUOTES);
 
             $result = $u->where('username', $username)
-                      ->get();
+                        ->andWhere('password', $password)
+                        ->get();
 
             if(count($result)) {
                 foreach($result as $res) {
