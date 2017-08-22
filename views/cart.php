@@ -62,7 +62,7 @@ use Epoch\Models\Product;
                         <li class="pull-left"><a href="#">ABOUT</a></li>
                         <li>
                             <?php if(count($_SESSION['cart'])): ?>
-                                <a href="cart" style="color: red;">CART</a>
+                                <a href="cart">CART</a>[<span><?php echo count($_SESSION['cart']);?></span>]
                             <?php else: ?>
                                 <a href="cart">CART</a>
                             <?php endif; ?>

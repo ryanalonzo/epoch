@@ -204,5 +204,8 @@ footer p {
     font-size: 1rem;
 }
 
-
+span {
+    color: red;
+    font-size: .85rem;
+}
 

@@ -158,3 +158,8 @@ footer p {
     font-weight: 300;
     font-size: 1rem;
 }
+
+span {
+    color: red;
+    font-size: .85rem;
+}
