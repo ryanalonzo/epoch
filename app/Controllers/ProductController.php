@@ -113,4 +113,24 @@ class ProductController
             echo "<script>alert('Successfully Updated!.');window.location = 'products'</script>";
         }
     }
+
+    function deleteProduct()
+    {
+        if(isset($_POST['delete'])) {
+            $product = new Product;
+
+            $prodID = $_POST['prod_id'];
+
+            $match = $product->where('id', $prodID)
+                             ->get();
+
+            foreach($match as $prod) {
+                $product->delete('products', $prodID);
+
+                unlink("images/products/$prod->image_src");
+
+                header('Location: products');
+            }
+        }
+    }
 }

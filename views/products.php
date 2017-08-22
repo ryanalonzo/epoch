@@ -107,7 +107,7 @@
                     <div class="item pull-left">
                         <img src="/images/products/<?php echo $product->image_src;?>" >
                         <div class="desc">
-                            <p class="pull-left"><?php echo $product->prod_name . ' &#8369;' . $product->unit_price;?></p>
+                            <p class="pull-left"><?php echo $product->prod_name . ' &#8369;' . $product->unit_price;?></p><br>
                             <?php if($_SESSION['user_type'] == 'Customer'):?>
                                 <form action="products" method="POST">
                                     <input type="submit" name="add_to_cart" value="ADD" class="pull-right">
@@ -115,9 +115,13 @@
                                 </form>
                             <?php elseif($_SESSION['user_type'] == 'admin'): ?>
                                     <form action="editProduct" method="POST">
-                                        <input type="submit" name="edit" value="EDIT" class="pull-right">
+                                        <input type="submit" name="edit" value="EDIT" class="pull-left">
                                         <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
                                     </form>
+                                    <form action="deleteProduct" method="POST">
+                                <input type="submit" name="delete" value="DELETE" class="pull-right">
+                                <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
+                            </form>
                             <?php endif;?>
                         </div>
                     </div>
@@ -131,6 +135,10 @@
                             </p>
                             <form action="editProduct" method="POST">
                                 <input type="submit" name="edit" value="EDIT" class="pull-right">
+                                <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
+                            </form>
+                            <form action="deleteProduct" method="POST">
+                                <input type="submit" name="delete" value="DELETE" class="pull-right">
                                 <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
                             </form>
                         </div>

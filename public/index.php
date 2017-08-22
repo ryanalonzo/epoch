@@ -23,6 +23,7 @@ $router->get('orderHistory', 'OrderController::showOrderHistory');
 $router->post('ProductController::addProduct');
 $router->post('ProductController::editProduct');
 $router->post('ProductController::updateProduct');
+$router->post('ProductController::deleteProduct');
 $router->post('UserController::newUser');
 $router->post('UserController::loginUser');
 $router->post('CartController::add');
