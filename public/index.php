@@ -10,7 +10,6 @@ $dotenv->load();
 $router = new \Epoch\Router($_SERVER['REQUEST_URI']);
 
 $router->get('', 'NavController::showHome');
-$router->get('profile', 'NavController::showProfile');
 $router->get('loginSignup', 'NavController::showLoginSignup');
 $router->get('logout', 'NavController::logout');
 $router->get('addNewProduct', 'NavController::showAddNewProduct');
@@ -19,6 +18,7 @@ $router->get('products', 'ProductController::showProducts');
 $router->get('cart', 'CartController::showCart');
 $router->get('checkout', 'OrderController::checkout');
 $router->get('orders', 'OrderController::showOrders');
+$router->get('orderHistory', 'OrderController::showOrderHistory');
 
 $router->post('ProductController::addProduct');
 $router->post('ProductController::editProduct');

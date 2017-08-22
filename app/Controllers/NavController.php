@@ -14,11 +14,6 @@ class NavController
         return view('loginSignup');
     }
 
-    function showProfile()
-    {
-        return view('profile');
-    }
-
     function showAddNewProduct()
     {
         return view('addNewProduct');

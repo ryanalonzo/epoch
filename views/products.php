@@ -58,14 +58,34 @@
                 </div>
             </div>
         </nav>
+    <?php elseif($_SESSION['user_type'] == 'Customer'): ?>
+        <nav class="clear-fix">
+            <div class="container">
+                <div class="nav-inner">
+                    <ul>
+                        <li class="pull-left"><a href="/">HOME</a></li>
+                        <li class="pull-left"><a href="products">SHOP</a></li>
+                        <li class="pull-left"><a href="orderHistory">ORDER HISTORY</a></li>
+                        <li class="pull-left"><a href="#">ABOUT</a></li>
+                        <li>
+                            <?php if(count($_SESSION['cart'])): ?>
+                                <a href="cart" style="color: red;">CART</a>
+                            <?php else: ?>
+                                <a href="cart">CART</a>
+                            <?php endif; ?>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <?php else: ?>
         <nav class="clear-fix">
             <div class="container">
                 <div class="nav-inner">
                     <ul>
-                        <li class="pull-left"><div style="width: 1%; height: 1px;"></div></li>
                         <li class="pull-left"><a href="/">HOME</a></li>
                         <li class="pull-left"><a href="products">SHOP</a></li>
+                        <li class="pull-left"><a href="orderHistory">ORDER HISTORY</a></li>
                         <li class="pull-left"><a href="#">ABOUT</a></li>
                         <li>
                             <?php if(count($_SESSION['cart'])): ?>
