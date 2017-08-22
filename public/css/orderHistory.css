@@ -151,13 +151,16 @@ table {
 }
 
 th {
-    font-family: "Roboto";
-    font-size: .90rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 1%;
 }
 
 td {
     font-family: "Roboto";
     font-weight: 300;
+    font-size: .90rem;
     text-align: center;
 }
 
