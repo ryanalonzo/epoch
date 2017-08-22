@@ -45,7 +45,7 @@ class OrderController
         $pdo = $order->make();
 
         $id = $_SESSION['id'];
-        $date = date('Y-m-d H:i:s');
+        $date = date('Y-m-d');
 
         $input = [
             'customer_id' => $id,
