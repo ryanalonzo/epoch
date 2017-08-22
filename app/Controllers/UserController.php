@@ -49,7 +49,6 @@ class UserController
             $password = htmlentities($_POST['password'], ENT_QUOTES);
 
             $result = $u->where('username', $username)
-                        ->andWhere('password', $password)
                         ->get();
 
             if(count($result)) {
@@ -63,11 +62,12 @@ class UserController
                         $_SESSION['id'] = $id;
                         $_SESSION['username'] = $username;
                         $_SESSION['user_type'] = $user_type;
+                    } else {
+                        echo "<script>alert('User not found.');window.location='loginSignup'</script>";
                     }
                 }
             } else {
                 echo "<script>alert('User not found.');window.location='loginSignup'</script>";
-                exit;
             }
         }
     }
