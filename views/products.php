@@ -125,7 +125,7 @@
                             <?php endif;?>
                         </div>
                     </div>
-                <?php elseif($_SESSION['user_type'] == 'admin'): ?>
+                <?php else: ?>
                     <div class="item pull-left">
                         <img src="/images/products/<?php echo $product->image_src;?>" >
                         <div class="desc">
@@ -134,7 +134,7 @@
                                 <span>OUT OF STOCK</span>
                             </p>
                             <form action="editProduct" method="POST">
-                                <input type="submit" name="edit" value="EDIT" class="pull-right">
+                                <input type="submit" name="edit" value="EDIT" class="pull-left">
                                 <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
                             </form>
                             <form action="deleteProduct" method="POST">
