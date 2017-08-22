@@ -1,3 +1,8 @@
+<?php
+    if(!$_SESSION['user_type'] == 'admin') {
+        header('location: /');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

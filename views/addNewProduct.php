@@ -1,3 +1,8 @@
+<?php
+    if(!$_SESSION['user_type'] == 'admin') {
+        header('location: /');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +84,6 @@
             </div>
         </nav>
     <?php endif; ?>
-
     <div class="container">
         <div class="add-new">
             <h1>ADD NEW PRODUCT</h1>
