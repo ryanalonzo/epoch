@@ -125,7 +125,7 @@
                             <?php endif;?>
                         </div>
                     </div>
-                <?php else: ?>
+                <?php elseif($_SESSION['user_type'] == 'admin'): ?>
                     <div class="item pull-left">
                         <img src="/images/products/<?php echo $product->image_src;?>" >
                         <div class="desc">
