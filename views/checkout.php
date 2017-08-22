@@ -83,9 +83,9 @@
             <div class="container">
                 <div class="nav-inner">
                     <ul>
-                        <li class="pull-left"><div style="width: 1%; height: 1px;"></div></li>
                         <li class="pull-left"><a href="/">HOME</a></li>
                         <li class="pull-left"><a href="products">SHOP</a></li>
+                        <li class="pull-left"><a href="orderHistory">ORDER HISTORY</a></li>
                         <li class="pull-left"><a href="#">ABOUT</a></li>
                         <li>
                             <?php if(count($_SESSION['cart'])): ?>
