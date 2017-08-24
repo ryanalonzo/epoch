@@ -137,20 +137,15 @@ nav li a:hover {
 
 .image-gallery {
     margin-top: 3%;
-    width: 100%;
 }
 
 .item {
-    margin-left: 3%;
+    margin-left: 2.4%;
     margin-bottom: 10%;
     border: 1px solid #ccc;
     width: 235px;
     height: 200px;
     text-align: center;
-}
-
-.item:first-child {
-    margin-left: 0;
 }
 
 .item:hover {

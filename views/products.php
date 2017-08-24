@@ -99,9 +99,9 @@
             </div>
         </nav>
     <?php endif; ?>
-<div class="container">
-    <div class="image-gallery">
 
+    <div class="image-gallery">
+        <div class="container">
             <?php foreach($products as $product):?>
                 <?php if($product->stocks):?>
                     <div class="item pull-left">
