@@ -158,7 +158,7 @@ span {
 }
 
 .login form {
-    margin-left: 30%;
+    margin-left: 20%;
 }
 
 .login input[type=text], input[type=password] {
@@ -185,7 +185,7 @@ span {
 }
 
 .signup form {
-    margin-right: 30%;
+    margin-right: 29%;
 }
 
 .signup input[type=text], input[type=password] {
