@@ -1,8 +1,3 @@
-<?php
-    if($_SESSION['user_type'] != 'admin') {
-        header('location: /');
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,25 +59,7 @@
             </div>
         </nav>
     <?php else: ?>
-        <nav class="clear-fix">
-            <div class="container">
-                <div class="nav-inner">
-                    <ul>
-                        <li class="pull-left"><div style="width: 1%; height: 1px;"></div></li>
-                        <li class="pull-left"><a href="/">HOME</a></li>
-                        <li class="pull-left"><a href="products">SHOP</a></li>
-                        <li class="pull-left"><a href="#">ABOUT</a></li>
-                        <li>
-                            <?php if(count($_SESSION['cart'])): ?>
-                                <a href="cart" style="color: red;">CART</a>
-                            <?php else: ?>
-                                <a href="cart">CART</a>
-                            <?php endif; ?>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+       <?php header('Location: /');?>
     <?php endif; ?>
     <?php
         $prodDetails = $_SESSION['prod_details'];

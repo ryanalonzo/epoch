@@ -44,7 +44,7 @@
         </div>
     </header>
 
-    <?php if($_SESSION['user_type'] == 'admin'): ?>
+    <?php if($_SESSION['user_type'] == 'admin'):?>
         <?php header('Location: /'); ?>
     <?php elseif($_SESSION['user_type'] == 'Customer'): ?>
         <nav class="clear-fix">
