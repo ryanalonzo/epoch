@@ -71,4 +71,11 @@ class UserController
             }
         }
     }
+
+    function logout()
+    {
+        session_destroy();
+
+        return header("Location: /");
+    }
 }

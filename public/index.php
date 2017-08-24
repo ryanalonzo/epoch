@@ -11,7 +11,7 @@ $router = new \Epoch\Router($_SERVER['REQUEST_URI']);
 
 $router->get('', 'NavController::showHome');
 $router->get('loginSignup', 'NavController::showLoginSignup');
-$router->get('logout', 'NavController::logout');
+$router->get('logout', 'UserController::logout');
 $router->get('addNewProduct', 'NavController::showAddNewProduct');
 $router->get('editProduct', 'NavController::showEditProduct');
 $router->get('products', 'ProductController::showProducts');
@@ -22,8 +22,6 @@ $router->get('orderHistory', 'OrderController::showOrderHistory');
 
 $router->post('ProductController::addProduct');
 $router->post('ProductController::editProduct');
-$router->post('ProductController::updateProduct');
-$router->post('ProductController::deleteProduct');
 $router->post('UserController::newUser');
 $router->post('UserController::loginUser');
 $router->post('CartController::add');

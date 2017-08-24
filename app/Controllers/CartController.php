@@ -6,6 +6,10 @@ use Epoch\Models\Product;
 
 class CartController
 {
+    /**
+     * Display all items in cart
+     * @return uri, array
+     */
     function showCart()
     {
         $items = array_count_values($_SESSION['cart']);
@@ -14,7 +18,9 @@ class CartController
             'items' => $items
         ]);
     }
-
+    /**
+     * Add items to cart
+     */
     function add()
     {
         if(!isset($_SESSION['cart'])) {
@@ -32,7 +38,9 @@ class CartController
             array_push($_SESSION['cart'], $id);
         }
     }
-
+    /**
+     * Remove item/s from cart
+     */
     function remove()
     {
         if(isset($_POST['remove'])) {

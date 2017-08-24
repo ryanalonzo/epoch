@@ -8,6 +8,9 @@ use Epoch\Models\Product;
 
 class OrderController
 {
+    /**
+     * Display all placed orders
+     */
     function showOrders()
     {
         $order = new Order;
@@ -22,7 +25,9 @@ class OrderController
             'orders' => $orders
         ]);
     }
-
+    /**
+     * Display order history page per user
+     */
     function showOrderHistory()
     {
         $order = new Order;
@@ -38,7 +43,10 @@ class OrderController
             'orders' => $orders
         ]);
     }
-
+    /**
+     * Save orders and update products quantity
+     * @return [type] [description]
+     */
     function checkout()
     {
         $order = new Order;

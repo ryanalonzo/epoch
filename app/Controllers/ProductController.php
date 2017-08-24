@@ -6,6 +6,9 @@ use Epoch\Models\Product;
 
 class ProductController
 {
+    /**
+     * Display all products
+     */
     function showProducts()
     {
         $product = new Product;
@@ -14,7 +17,9 @@ class ProductController
 
         return view('products', ['products' => $products]);
     }
-
+    /**
+     * Add product into the database
+     */
     function addProduct()
     {
         if(isset($_POST['add'])) {
@@ -96,10 +101,7 @@ class ProductController
             $_SESSION['prod_details'] = $prodDetails;
 
         }
-    }
 
-    function updateProduct()
-    {
         if(isset($_POST['update'])) {
             $product = new Product;
 
@@ -112,10 +114,7 @@ class ProductController
             $product->update($input, $_POST['prod_id']);
             echo "<script>alert('Successfully Updated!.');window.location = 'products'</script>";
         }
-    }
 
-    function deleteProduct()
-    {
         if(isset($_POST['delete'])) {
             $product = new Product;
 
